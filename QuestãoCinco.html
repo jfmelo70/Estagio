@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter String</title>
+</head>
+<body>
+    <h1>Inverter String</h1>
+    
+    <label for="inputString">Digite uma string:</label>
+    <input type="text" id="inputString">
+    <button onclick="inverterString()">Inverter</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function inverterString() {
+            const input = document.getElementById("inputString").value;
+            const stringInvertida = inverter(input);
+            document.getElementById("resultado").innerText = `String invertida: ${stringInvertida}`;
+        }
+
+        function inverter(str) {
+            let resultado = "";
+            // Iterar pelos caracteres da string de trás para frente
+            for (let i = str.length - 1; i >= 0; i--) {
+                resultado += str[i];
+            }
+            return resultado;
+        }
+    </script>
+</body>
+</html>
